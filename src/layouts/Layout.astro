@@ -31,7 +31,9 @@ const pathWithoutBase = Astro.url.pathname.replace(basePath, '').replace(/^\/?/,
                 <a href={basePath + (lang === 'en' ? pathWithoutBase : `/en${pathWithoutBase}`)} class={lang === 'en' ? 'active' : ''}>🇺🇸 EN</a>
             </div>
         </nav>
-		<slot />
+		<main class="main-content">
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -66,11 +68,18 @@ const pathWithoutBase = Astro.url.pathname.replace(basePath, '').replace(/^\/?/,
         display: flex;
         justify-content: flex-end;
         padding: 1.5rem 2.5rem;
-        position: absolute;
+        position: sticky;
         top: 0;
-        right: 0;
         width: 100%;
         z-index: 50;
+        background: rgba(10, 15, 22, 0.8);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .main-content {
+        position: relative;
+        z-index: 1;
     }
     .lang-switch {
         background: rgba(0, 0, 0, 0.3);

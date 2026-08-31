@@ -12,15 +12,19 @@ export function getStaticPaths() {
 
 const { recipe } = Astro.props;
 const data = recipe.es;
+
+// Handle image path - add base path for local images
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imageUrl = recipe.image.startsWith('http') ? recipe.image : `${basePath}${recipe.image}`;
 ---
 
 <Layout title={`${data.title} | Sabor Argentino`} lang="es">
     <article class="recipe-detail">
-        <a href="/" class="back-link">← Volver a recetas</a>
+        <a href={`${basePath}/recetas`} class="back-link">← Volver a recetas</a>
         
         <header class="detail-hero">
             <div class="image-container">
-                <img src={recipe.image} alt={data.title} transition:name={`img-${recipe.id}`} />
+                <img src={imageUrl} alt={data.title} transition:name={`img-${recipe.id}`} />
                 <div class="overlay"></div>
             </div>
             <div class="hero-content">
@@ -60,6 +64,7 @@ const data = recipe.es;
         max-width: 900px;
         margin: 0 auto;
         padding: 2rem 1rem 6rem;
+        padding-top: 2rem;
 		animation: fadeIn 0.8s ease-out forwards;
     }
 

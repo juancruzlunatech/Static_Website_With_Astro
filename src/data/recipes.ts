@@ -21,7 +21,7 @@ export const recipes = [
 	},
 	{
 		id: 'asado',
-		image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800',
+		image: '/Asado.png',
 		es: {
 			title: 'Asado Tradicional',
 			description: 'El clásico domingo argentino. Costillar, vacío, tira de asado y achuras cocinadas lentamente al fuego de leña. Acompañado de un buen chimichurri.',
@@ -61,7 +61,7 @@ export const recipes = [
 	},
 	{
 		id: 'milanesa',
-		image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80&w=800',
+		image: '/Milanesa.png',
 		es: {
 			title: 'Milanesa a la Napolitana',
 			description: 'La leyenda de Buenos Aires. Milanesa de carne empanizada al horno, cubierta con salsa de tomate, jamón, queso derritido y orégano.',
@@ -161,7 +161,7 @@ export const recipes = [
 	},
 	{
 		id: 'humita',
-		image: 'https://images.unsplash.com/photo-1626200419189-3b58eb14affc?auto=format&fit=crop&q=80&w=800',
+		image: '/humita.webp',
 		es: {
 			title: 'Humita en Chala',
 			description: 'El sabor tradicional del norte. Una crema espesa de choclo, zapallo y albahaca, cocinada y envuelta en la propia chala del maíz.',
@@ -181,7 +181,7 @@ export const recipes = [
 	},
 	{
 		id: 'provoleta',
-		image: 'https://images.unsplash.com/photo-1605342417646-c22ae2492160?auto=format&fit=crop&q=80&w=800',
+		image: '/provoleta-argentina.png',
 		es: {
 			title: 'Provoleta Asada',
 			description: 'Una generosa rodaja de queso provolone asada a la parrilla o plancha, con una costra dorada por fuera y derretida en su interior.',
