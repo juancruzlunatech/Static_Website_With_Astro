@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://juancruzlunatech.github.io',
   base: '/AnygravityTest',
+  outDir: './docs',
 });
