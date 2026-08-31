@@ -5,6 +5,10 @@ interface Props {
 }
 
 const { title, lang = 'es' } = Astro.props;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing slash
+
+// Remove base path from pathname for link manipulation
+const pathWithoutBase = Astro.url.pathname.replace(basePath, '').replace(/^\/?/, '/');
 ---
 
 <!doctype html>
@@ -23,8 +27,8 @@ const { title, lang = 'es' } = Astro.props;
 	<body>
         <nav class="top-nav">
             <div class="lang-switch">
-                <a href={Astro.url.pathname.replace(/^\/en/, '') || '/'} class={lang === 'es' ? 'active' : ''}>🇪🇸 ES</a>
-                <a href={lang === 'en' ? Astro.url.pathname : `/en${Astro.url.pathname}`} class={lang === 'en' ? 'active' : ''}>🇺🇸 EN</a>
+                <a href={basePath + (pathWithoutBase.replace(/^\/en\/?/, '/') || '/')} class={lang === 'es' ? 'active' : ''}>🇪🇸 ES</a>
+                <a href={basePath + (lang === 'en' ? pathWithoutBase : `/en${pathWithoutBase}`)} class={lang === 'en' ? 'active' : ''}>🇺🇸 EN</a>
             </div>
         </nav>
 		<slot />
