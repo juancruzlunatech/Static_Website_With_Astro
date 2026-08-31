@@ -1,135 +1,46 @@
-# 🍖 Argentine Recipes
+# Astro Starter Kit: Basics
 
-A traditional Argentine recipes website built with **Astro**, featuring authentic flavors of Argentine cuisine with multilingual support (Spanish and English).
-
-## ✨ Features
-
-- 🌍 **Multilingual**: Full support for Spanish and English
-- 🎨 **Modern Design**: Attractive interface with dark theme
-- 🔍 **Detailed Recipes**: Complete information on ingredients, steps and preparation time
-- 📱 **Responsive**: Optimized for mobile and desktop devices
-- ⚡ **High Performance**: Built with Astro for maximum speed
-
-## 🍽️ Included Recipes
-
-- **Tucuman Empanadas** - Authentic hand-cut meat empanadas, juicy and delicious
-- **Traditional Asado** - The classic Argentine Sunday BBQ with wood-fired grilled meats
-- **Maicena Alfajores** - Soft maicena shortbread cookies filled with dulce de leche
-
-## 🛠️ Technologies
-
-- [Astro](https://astro.build) v6.1.1 - Modern and fast web framework
-- JavaScript/TypeScript
-- Node.js >= 22.12.0
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 22.12.0 or higher
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/recetas-argentinas.git
-cd recetas-argentinas
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+```sh
+npm create astro@latest -- --template basics
 ```
 
-The site will be available at `http://localhost:4321`
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 📖 Available Commands
+## 🚀 Project Structure
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start local development server |
-| `npm run build` | Build the site for production |
-| `npm run preview` | Preview the production build |
-| `npm run astro -- --help` | Astro CLI help |
+Inside of your Astro project, you'll see the following folders and files:
 
-## 📁 Project Structure
-
-```
-recetas-argentinas/
-├── src/
-│   ├── components/       # Reusable Astro components
-│   ├── data/            # Recipe data
-│   ├── layouts/         # Main layouts
-│   ├── pages/           # Pages and routes
-│   │   ├── index.astro
-│   │   ├── recetas/     # Spanish recipes page
-│   │   └── en/          # English pages
-│   └── assets/          # Images and static resources
-├── public/              # Static files
-├── astro.config.mjs     # Astro configuration
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
 └── package.json
 ```
 
-## 🌐 Navigation
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-- **Home**: Main page with site presentation
-- **Recipes (ES)**: Recipe catalog in Spanish at `/recetas`
-- **Recipes (EN)**: Recipe catalog in English at `/en/recipes`
+## 🧞 Commands
 
-## 📝 Adding a New Recipe
+All commands are run from the root of the project, from a terminal:
 
-To add a new recipe, edit the `src/data/recipes.ts` file and add a new object with the following structure:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-```typescript
-{
-  id: 'unique-id',
-  image: '/image-path.png',
-  es: {
-    title: 'Recipe Name',
-    description: 'Description',
-    time: '1h 30m',
-    difficulty: 'Medium',
-    ingredients: ['Ingredient 1', 'Ingredient 2'],
-    steps: ['Step 1', 'Step 2']
-  },
-  en: {
-    title: 'Recipe Name',
-    description: 'Description',
-    time: '1h 30m',
-    difficulty: 'Medium',
-    ingredients: ['Ingredient 1', 'Ingredient 2'],
-    steps: ['Step 1', 'Step 2']
-  }
-}
-```
+## 👀 Want to learn more?
 
-## 🤝 Contributing
-
-Contributions are welcome. Please:
-
-1. Fork the repository
-2. Create a branch for your feature (`git checkout -b feature/FantasticRecipe`)
-3. Commit your changes (`git commit -m 'Add fantastic recipe'`)
-4. Push to the branch (`git push origin feature/FantasticRecipe`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is under the MIT license - see the LICENSE file for more details.
-
-## 🎯 Future Features
-
-- [ ] Recipe search system
-- [ ] Filter by difficulty and preparation time
-- [ ] Comments/reviews database
-- [ ] Printable recipe version
-- [ ] Social media integration
-
-## ✍️ Author
-
-Created with 💜 by Juancruzlunatech
-
----
-
-Enjoy discovering the authentic **Argentine Flavor**! 🇦🇷
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
