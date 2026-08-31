@@ -128,7 +128,7 @@ This project is under the MIT license - see the LICENSE file for more details.
 
 ## ✍️ Author
 
-Created with 💜 by [Your Name]
+Created with 💜 by Juancruzlunatech
 
 ---
 
