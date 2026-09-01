@@ -8,7 +8,7 @@ const { recipe, lang = 'es' } = Astro.props;
 const data = recipe[lang];
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing slash
 const link = lang === 'en' ? `${basePath}/en/recetas/${recipe.id}` : `${basePath}/recetas/${recipe.id}`;
-const actionText = lang === 'en' ? 'View full recipe &rarr;' : 'Ver receta completa &rarr;';
+const actionText = lang === 'en' ? 'View full recipe →' : 'Ver receta completa →';
 
 // Handle image path - add base path for local images
 const imageUrl = recipe.image.startsWith('http') ? recipe.image : `${basePath}${recipe.image}`;
